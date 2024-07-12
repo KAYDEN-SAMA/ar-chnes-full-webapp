@@ -1,11 +1,11 @@
 const buttons = document.querySelectorAll('.guildButton');
 
-selectedGuild = "aráchnes";
+let selectedGuild = "aráchnes";
 
 function storeButtonValue(event) {
-  buttonValue = event.target.value;
+  const buttonValue = event.target.getAttribute('data-value');
   localStorage.setItem('selectedGuild', buttonValue);
-  window.location.href = "/ar-chnes-full-webapp/bank.html";
+  window.location.href = "/bank.html"
 }
 
 buttons.forEach(button => {
