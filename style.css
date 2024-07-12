@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  background-color: #121212;
+}
+
+body {
+  margin: 0 0 10vh;
+  font-family: "Alexandria", sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+header {
+  border-bottom: 1px solid #908d96;
+  padding: 5%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 150px;
+  height: 100px;
+  border-radius: 4%;
+  object-fit: cover;
+  box-shadow: 0px 0px 7px rgba(255,255,255,0.7);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 82vh;
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  direction: rtl;
+}
+
+.top-section p {
+  line-height: 150%;
+  font-size: 20px;
+  margin: 5% 5% 5% 10%;
+  padding: 3%;
+}
+
+.card {
+  border: 1px white solid;
+  box-shadow: 0px 0px 10px rgba(255,255,255,1);
+  border-radius: 4%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5%;
+  margin: 5%;
+}
+
+.card > * {
+  margin: 3%;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 3%;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+  border: 1px black solid;
+  background-color: white;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #908d96;
+  padding: 5%;
+  color: #ffffff;
+}
+
+footer p a {
+  color: #ffffff;
+}
+
+/* keyframes and media screens here 👇 */
+@media screen and (max-width: 575px) {
+  main {
+    display: block;
+  }
+
+  header,
+  footer {
+    padding: 3%;
+  }
+}
