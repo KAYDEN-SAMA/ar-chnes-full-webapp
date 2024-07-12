@@ -17,8 +17,11 @@ const db = getDatabase(app);
 const auth = getAuth(app);
 
 let selectedGuild = localStorage.getItem('selectedGuild') || "aráchnes";
+
 const path = ref(db, 'guilds/' + selectedGuild);
+
 const dataCountainer = document.getElementById("dataCountainer");
+
 const loadingAnimation = dataCountainer.innerHTML;
 
 async function searchUserByUsername(username) {
