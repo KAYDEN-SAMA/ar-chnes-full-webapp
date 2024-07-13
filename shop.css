@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  background-color: #121212;
+}
+
+body {
+  margin: 0 0 10vh;
+  font-family: "Alexandria", sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+header {
+  border-bottom: 1px solid #908d96;
+  padding: 5%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  direction: rtl;
+}
+
+header img {
+  width: 150px;
+  height: 100px;
+  border-radius: 4%;
+  object-fit: cover;
+  box-shadow: 0px 0px 7px rgba(255,255,255,0.7);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 82vh;
+  width: 100%;
+}
+
+main section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  direction: rtl;
+}
+
+#data-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+}
+
+#data-section > * {
+  margin: 2% 0%;
+}
+
+.card {
+  border: 1px white solid;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 4%;
+}
+
+.card > * {
+  margin: 2% 0%;
+}
+
+.card button {
+  border: none;
+  padding: 2% 4%;
+  border-radius: 3%;
+  transition: 0.5s all ease;
+}
+
+.card button:hover {
+  padding: 2.5% 4.5%;
+  background-color: whitesmoke;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #908d96;
+  padding: 5%;
+  color: #ffffff;
+}
+
+footer p a {
+  color: #ffffff;
+}
+
+/* keyframes and media screens here 👇 */
+@media screen and (max-width: 575px) {
+  main {
+    display: block;
+  }
+
+  header,
+  footer {
+    padding: 3%;
+  }
+}
