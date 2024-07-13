@@ -19,18 +19,23 @@ const auth = getAuth(app);
 function fetchData() {
   const offersPath = ref(db, 'shop');
   get(offersPath).then((snapshot) => {
-    const dataSection = document.getElementById("data-section");
+    const dataSection = document.getElementById("dataSection");
     if (snapshot.exists()) {
       const offers = snapshot.val();
       let offersHTML = '<h3>العروض المتوفرة</h3>';
       Object.keys(offers).forEach((offerId, index) => {
         const offer = offers[offerId];
         offersHTML += `
-          <div class="card">
-                  <h3>${offer.title}</h3>
-                  <p>${offer.description}</p>
-                  <label>السعر: <span>${offer.price}</span></label>
-                  <button id="purchase-button-${index}" data-price="${offer.price}" data-title="${offer.title}">طلب العرض</button>
+          <div class="offer-card">
+            <div class="cover-div">
+              <img src="${offer.cover}">
+            </div>
+            <div class="card-elements">
+              <h4>${offer.title}</h4>
+              <p>${offer.description}</p>
+              <p>السعر: ${offer.price}</p>
+              <button id="purchase-button-${index}" data-price="${offer.price}" data-title="${offer.title}">طلب العرض</button>
+            </div>
           </div>`;
       });
       dataSection.innerHTML = offersHTML;
